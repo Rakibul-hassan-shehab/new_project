@@ -1,0 +1,155 @@
+:root{
+    --black: #1c1c1c;
+    --gray: #919191;
+    -light-gary: #ebebeb;
+    -hot-pink: #ff214f;
+    --primary-font: "Roboto", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--light-gray);
+    font-family: var(--primary-font);
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+nav > ul > li > a{
+    color: var(--black);
+}
+.section{
+    padding: 14rem 25px;
+}
+.section-primary{
+    background: var(--light-gray);
+}
+.section-secondary{
+    background: var(--black);
+    color: white;
+}
+.section_title_container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.section_title-primary,
+.section_title-secondary,
+.section_title-tertiary {
+    flex-shrink: 0;
+
+}
+.section_title-primary{
+    color: var(--black);
+}
+.section_title-secondary{
+    color: var(--hot-pink);
+}
+.section_title-tertiary{
+    color: var(--gray);
+}
+
+.line--primary,
+.line--secondary,
+.line--tertiary {    
+    width: 80%;
+    margin-left: 3px;
+    height: 1px;
+}
+
+.line--primary {
+    background: var(--black);
+}
+.line--secondary {
+    background: var(--hot-pink);
+}
+.line--tertiary{
+    background: var(--gray);
+}
+
+.section_text-primary,
+.section_text-secondary,
+.section_text-tertiary {
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+
+.section_text-primary{
+    color: var(--black);
+}
+.section_text-secondary{
+    color: var(--hot-pink);
+}
+.section_text-tertiary{
+    color: var(--gray);
+}
+
+
+.photo_galary{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.photo_galary > img{
+    height: 100%;
+    width: 100%;
+    border: 0.3px solid rgb(73, 67, 67);
+}
+
+.long_img{
+    grid-row: span 2;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.logo_container img{
+    width: 130px;
+}
+
+@media only screen  and (max-width: 850px) {
+    .photo_galary{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .line--primary,
+    .line--secondary,
+    .line--tertiary {    
+        display: none;
+    }.section{
+        padding: 4rem 25px;
+        
+    }
+    .section_title_container{
+        justify-content: center;
+    }
+    .section_text-primary,
+    .section_text-secondary,
+    .section_text-tertiary {
+        font-size: 2.5rem;
+        text-align: center;
+    
+    }
+}
